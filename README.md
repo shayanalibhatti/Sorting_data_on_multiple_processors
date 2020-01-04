@@ -1,4 +1,4 @@
-# Sorting_data_on_multiple_processors
+# Sorting data on multiple processors
 In this Python repository, I sorted data using multiple processors via MPI4PY library. Multi processor processing is very important for parallel processing. In this project, we sort data using the available processors and sort the data using parallel processing. Following is the task description:
 
 ### Task description
