@@ -1,9 +1,18 @@
 # Sorting_data_on_multiple_processors
 In this Python repository, I sorted data using multiple processors via MPI4PY library. Multi processor processing is very important for parallel processing. 
+
+First we install mpi4py in command prompt:
+
+'''
+mpi4py using pip install mpi4py
+'''
+
+Following is the explanation of the code:
+
 '''
 from mpi4py import MPI
 import math
-
+'''
 root = 0
 # Get all processors
 comm = MPI.COMM_WORLD
