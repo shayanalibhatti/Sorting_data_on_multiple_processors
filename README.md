@@ -1,5 +1,5 @@
 # Sorting data on multiple processors
-In this Python repository, I sorted data using multiple processors via MPI4PY library. Multi processor processing is very important for parallel processing. In this project, we sort data using the available processors and sort the data using parallel processing. Following is the task description:
+In this Python repository, I sorted data using multiple processors via MPI4PY library. Multi-processor processing is done using MPI (Message Passing Interface). MPI is a standardized and portable message-passing system designed to function on a wide variety of parallel computers. In this project, we sort data using the available processors and sort the data using parallel processing. Following is the task description:
 
 ### Task description
 Write a sorting program which works in parallel with collective communication using mpi4py for an arbitrary number of processes. The root process should generate a large unsorted data set (e.g. 10,000 elements), then slice it into bins by value and send each bin (except one) to the other processes to sort. You can utilize any appropriate method to sort the data. The sorted data should then be sent back to the root process and put into rank order. The data should now be completely sorted.
@@ -70,4 +70,10 @@ g = comm.gather(v,root)
 if comm.rank==0:
     for i in range(len(g)):
         print("Rank:",i," ",g[i])
+```
+
+### Running the code
+In order to run the code, we go to the path where the code is stored and write in command prompt where 4 is the number of processors we intend to run the program on. mpiexec is the command used to run serial or parallel jobs in MPI.
+```
+mpiexec -np 4 python mpi4py_sorting_program.py
 ```
